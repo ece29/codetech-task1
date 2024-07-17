@@ -1,6 +1,6 @@
 Name: Prince sahgal
 Company: codetech it solutions
-ID:ID: CT06ML359
+ID: CT06ML359
 Domain:Machine learning
 duration: JUNE 2024 to 30th JULY 2024
 Mentor:SRAVANI GOUNI 
