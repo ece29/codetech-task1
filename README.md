@@ -22,5 +22,7 @@ Train-Test Split: Divide the dataset into training and testing sets to evaluate 
 
 
 project:ANALYSIS ON MOVIE REVIEWS
+![image](https://github.com/user-attachments/assets/c6a69d7e-cfdf-4ec6-9c45-b5d04e66f1bf)
+
 
 
