@@ -8,8 +8,8 @@ Mentor:SRAVANI GOUNI
 
 Overview of the project. 
 
-Project title:ANALYSIS ON MOVIE REVIEWS
-Data Collection
+Project title:ANALYSIS ON MOVIE REVIEWS   
+1.Data Collection
 Acquire the Dataset: Obtain the IMDb Movie Reviews dataset or any other dataset of movie reviews. This dataset typically contains reviews labeled as positive or negative.
 2. Data Preprocessing
 Text Cleaning: Remove unwanted characters, punctuations, and correct misspellings.
