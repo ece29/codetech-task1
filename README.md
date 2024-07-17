@@ -8,6 +8,10 @@ Mentor:SRAVANI GOUNI
 
 Overview of the project. 
 
+Develop a sentiment analysis model to classify movie reviews as positive or
+negative. Use a dataset like the IMDb Movie Reviews dataset for training and
+testing.
+
 Project title:ANALYSIS ON MOVIE REVIEWS   
 1.Data Collection
 Acquire the Dataset: Obtain the IMDb Movie Reviews dataset or any other dataset of movie reviews. This dataset typically contains reviews labeled as positive or negative.
@@ -18,7 +22,7 @@ Stop Words Removal: Remove common words (e.g., 'the', 'is', 'in') that do not co
 Stemming/Lemmatization: Reduce words to their root form.
 3. Data Splitting
 Train-Test Split: Divide the dataset into training and testing sets to evaluate the model's performance.
-4. Feature Extraction
+
 
 
 project:ANALYSIS ON MOVIE REVIEWS
