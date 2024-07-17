@@ -1,0 +1,53 @@
+import pandas as pd
+import numpy as np
+import nltk
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.pipeline import Pipeline
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+
+# Download NLTK data
+nltk.download('stopwords')
+
+# Load the IMDb dataset
+# For this example, we'll use a small sample dataset available in NLTK. 
+# You can replace this with the full IMDb dataset from an external source if needed.
+from nltk.corpus import movie_reviews
+nltk.download('movie_reviews')
+
+# Create a DataFrame from the dataset
+documents = [(list(movie_reviews.words(fileid)), category)
+             for category in movie_reviews.categories()
+             for fileid in movie_reviews.fileids(category)]
+
+# Convert to a DataFrame
+df = pd.DataFrame(documents, columns=['text', 'label'])
+
+# Convert the list of words to a single string per review
+df['text'] = df['text'].apply(lambda x: ' '.join(x))
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(df['text'], df['label'], test_size=0.2, random_state=42)
+
+# Create a pipeline for text processing and model training
+pipeline = Pipeline([
+    ('vect', CountVectorizer(stop_words='english')),
+    ('tfidf', TfidfTransformer()),
+    ('clf', MultinomialNB()),
+])
+
+# Train the model
+pipeline.fit(X_train, y_train)
+
+# Make predictions on the test set
+y_pred = pipeline.predict(X_test)
+
+# Evaluate the model
+accuracy = accuracy_score(y_test, y_pred)
+report = classification_report(y_test, y_pred)
+conf_matrix = confusion_matrix(y_test, y_pred)
+
+print(f"Accuracy: {accuracy}")
+print("Classification Report:\n", report)
+print("Confusion Matrix:\n", conf_matrix)
