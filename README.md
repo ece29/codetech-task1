@@ -1,8 +1,13 @@
 Name: Prince sahgal
+
 Company: codetech it solutions
+
 ID: CT06ML359
+
 Domain:Machine learning
+
 duration: JUNE 2024 to 30th JULY 2024
+
 Mentor:SRAVANI GOUNI 
 
 
@@ -11,6 +16,7 @@ Overview of the project.
 Develop a sentiment analysis model to classify movie reviews as positive or
 negative. Use a dataset like the IMDb Movie Reviews dataset for training and
 testing.
+
 
 Project title:ANALYSIS ON MOVIE REVIEWS   
 1.Data Collection
